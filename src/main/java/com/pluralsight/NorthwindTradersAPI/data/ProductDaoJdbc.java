@@ -1,7 +1,6 @@
 package com.pluralsight.NorthwindTradersAPI.data;
 
 import com.pluralsight.NorthwindTradersAPI.model.Product;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
@@ -52,7 +51,7 @@ public class ProductDaoJdbc implements ProductDao {
         return products;
     }
 
-    public Product find(int id) {
+    public Product getById(int id) {
         Product product = null;
         String query = "SELECT * FROM products WHERE ProductID = ?";
 
@@ -87,7 +86,7 @@ public class ProductDaoJdbc implements ProductDao {
     }
 
     // create
-    public Product add(Product product) {
+    public Product insert(Product product) {
         String query = """
                 INSERT INTO products
                     (ProductName, SupplierID, CategoryID, QuantityPerUnit,
@@ -181,8 +180,6 @@ public class ProductDaoJdbc implements ProductDao {
         }
     }
 
-    @Override
-    public Product getById(int id) {
-        return null;
+
     }
-}
+
