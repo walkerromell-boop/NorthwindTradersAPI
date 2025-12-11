@@ -1,7 +1,7 @@
 package com.pluralsight.NorthwindTradersAPI.model;
 
 
-public class ProductN {
+public class Product {
     private int productId;        // auto-generated
     private String productName;
     private int supplierId;
@@ -13,7 +13,7 @@ public class ProductN {
     private short reorderLevel;
     private boolean discontinued;
 
-    public ProductN(Integer productId, String productName, Integer supplierId, Integer categoryId, String quantityPerUnit, Double unitPrice, Short unitsInStock, Short unitsOnOrder, Short reorderLevel, Boolean discontinued) {
+    public Product(Integer productId, String productName, Integer supplierId, Integer categoryId, String quantityPerUnit, Double unitPrice, Short unitsInStock, Short unitsOnOrder, Short reorderLevel, Boolean discontinued) {
         this.productId = productId;
         this.productName = productName;
         this.supplierId = supplierId;
